@@ -11,7 +11,7 @@ class ChartView: UIView {
 
     lazy var containerView: UIView = {
         let view = UIView()
-        view.backgroundColor = .white
+        view.backgroundColor = .gray
         view.layer.cornerRadius = 4
         return view
     }()
@@ -50,6 +50,7 @@ private extension ChartView {
             containerView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             containerView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             containerView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            containerView.widthAnchor.constraint(equalTo: self.widthAnchor),
             
             stackView.topAnchor.constraint(equalTo: self.topAnchor),
             stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor),

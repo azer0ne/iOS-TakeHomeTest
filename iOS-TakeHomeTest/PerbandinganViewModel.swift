@@ -11,6 +11,9 @@ class PerbandinganViewModel {
     
     let apiClient = ApiClient()
     
+    var productCallback: ((Result<ProductDataResponse.ProductData, Error>) -> Void)?
+    var chartCallback: ((Result<ChartData, Error>) -> Void)?
+
     func getProduct() {
         apiClient.getData(endpoint: .productDetail) { result in
             switch result {

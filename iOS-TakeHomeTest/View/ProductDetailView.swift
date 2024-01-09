@@ -9,6 +9,8 @@ import UIKit
 
 class ProductDetailView: UIView {
 
+    var color: UIColor
+    
     lazy var containerView: UIView = {
         let containerView = UIView()
         containerView.backgroundColor = .white
@@ -34,7 +36,8 @@ class ProductDetailView: UIView {
         return label
     }()
     
-    override init(frame: CGRect) {
+    init(color: UIColor) {
+        self.color = color
         super.init(frame: .zero)
         setupUI()
     }

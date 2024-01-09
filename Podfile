@@ -6,5 +6,5 @@ target 'iOS-TakeHomeTest' do
   use_frameworks!
 
   # Pods for iOS-TakeHomeTest
-#  pod 'SwiftLint'
+  pod 'SwiftLint'
 end

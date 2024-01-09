@@ -9,9 +9,11 @@ import UIKit
 
 class ProductHeaderView: UIView {
 
+    var color: UIColor
+    
     lazy var containerView: UIView = {
         let containerView = UIView()
-        containerView.backgroundColor = .white
+        containerView.backgroundColor = color
         containerView.layer.cornerRadius = 4
         return containerView
     }()
@@ -31,7 +33,8 @@ class ProductHeaderView: UIView {
         return titleLabel
     }()
     
-    override init(frame: CGRect) {
+    init(color: UIColor) {
+        self.color = color
         super.init(frame: .zero)
         setup()
     }
